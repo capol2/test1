@@ -1,0 +1,35 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+    
+        int tab1 = scanner.nextInt();
+        int tab2 = scanner.nextInt();
+        int[][] tablica = new int[tab1][tab2];
+    
+        for (int i = 0; i < tab1; i++) {
+            for (int j = 0; j < tab2; j++) {
+                tablica[i][j] = scanner.nextInt();
+            }
+        }
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+    
+        for (int i = 0; i < tab1; i++) {
+            for (int j = 0; j < tab2; j++) {
+                if (num1 == j) {
+                    System.out.print(tablica[i][num2] + " ");
+
+                } else if (num2 == j) {
+                    System.out.print(tablica[i][num1] + " ");
+                } else {
+                    System.out.print(tablica[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    
+    }
+}
